@@ -1,15 +1,141 @@
-<script>
-  (function(d,t) {
-    var BASE_URL="https://chatwoot-production-2783.up.railway.app";
-    var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    g.src=BASE_URL+"/packs/js/sdk.js";
-    g.async = true;
-    s.parentNode.insertBefore(g,s);
-    g.onload=function(){
-      window.chatwootSDK.run({
-        websiteToken: '5BELjpYrP8Q7tEFSTEo8ZznM',
-        baseUrl: BASE_URL
-      })
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Music</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #1a0b1f;
+      color: white;
+      overflow-x: hidden;
     }
-  })(document,"script");
-</script>
+
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: url('background.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(60, 0, 80, 0.55);
+      backdrop-filter: blur(4px);
+    }
+
+    .content {
+      position: relative;
+      z-index: 10;
+      max-width: 800px;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 60px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 28px;
+      margin: 10px 0 20px 0;
+    }
+
+    .description {
+      font-size: 18px;
+      opacity: 0.9;
+      margin-bottom: 30px;
+    }
+
+    .btn-start {
+      background: #c07bff;
+      border: none;
+      padding: 14px 32px;
+      font-size: 18px;
+      border-radius: 30px;
+      cursor: pointer;
+      color: white;
+      transition: 0.3s;
+    }
+
+    .btn-start:hover {
+      background: #a85af6;
+    }
+
+    .cards {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      width: 180px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      backdrop-filter: blur(6px);
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-5px);
+    }
+
+    .card-icon {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="content">
+      <h1>Digital Music</h1>
+      <p class="subtitle">🎵 ¡Ahora el DJ eres tú!</p>
+      <p class="description">Descubre sitios de entretenimiento cercanos y controla la música como un verdadero DJ</p>
+      <button class="btn-start">Comenzar Ahora</button>
+
+      <div class="cards">
+        <div class="card"><div class="card-icon">📍</div>Mapa Interactivo</div>
+        <div class="card"><div class="card-icon">🎶</div>Pedir Música</div>
+        <div class="card"><div class="card-icon">❤️</div>Mis Favoritas</div>
+        <div class="card"><div class="card-icon">👤</div>Perfil DJ</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHATWOOT INTEGRATION -->
+  <script>
+    (function(d,t) {
+      var BASE_URL="https://chatwoot-production-2783.up.railway.app";
+      var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=BASE_URL+"/packs/js/sdk.js";
+      g.async = true;
+      s.parentNode.insertBefore(g,s);
+      g.onload=function(){
+        window.chatwootSDK.run({
+          websiteToken: '5BELjpYrP8Q7tEFSTEo8ZznM',
+          baseUrl: BASE_URL
+        })
+      }
+    })(document,"script");
+  </script>
+</body>
+</html>
