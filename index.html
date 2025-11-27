@@ -101,37 +101,6 @@
       font-size: 30px;
       margin-bottom: 10px;
     }
-  
-    /* Responsive: móviles */
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 38px;
-      }
-      .subtitle {
-        font-size: 20px;
-      }
-      .description {
-        font-size: 16px;
-      }
-      .hero {
-        height: 90vh;
-        padding: 20px;
-      }
-      .cards {
-        gap: 14px;
-      }
-      .card {
-        width: 150px;
-        padding: 16px;
-      }
-      .card-icon {
-        font-size: 26px;
-      }
-      .btn-start {
-        padding: 12px 26px;
-        font-size: 16px;
-      }
-    }
   </style>
 </head>
 <body>
@@ -167,21 +136,12 @@
           type: 'standard',
           launcherTitle: 'Pedir Música',
           darkMode: true,
-          position: window.innerWidth < 768 ? 'left' : 'right',
-          widgetStyle: window.innerWidth < 768 ? {
+          position: 'right',
+          widgetStyle: {
             brandColor: '#c07bff',
             accentColor: '#a85af6',
             textColor: '#ffffff',
-            backgroundColor: '#1a0b1f',
-            launcherHeight: '60px',
-            launcherWidth: '60px'
-          } : {
-            brandColor: '#c07bff',
-            accentColor: '#a85af6',
-            textColor: '#ffffff',
-            backgroundColor: '#1a0b1f',
-            launcherHeight: '70px',
-            launcherWidth: '70px'
+            backgroundColor: '#1a0b1f'
           }
         })
       }
