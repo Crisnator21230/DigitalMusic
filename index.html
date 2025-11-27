@@ -132,7 +132,17 @@
       g.onload=function(){
         window.chatwootSDK.run({
           websiteToken: '5BELjpYrP8Q7tEFSTEo8ZznM',
-          baseUrl: BASE_URL
+          baseUrl: BASE_URL,
+          type: 'standard',
+          launcherTitle: 'Pedir Música',
+          darkMode: true,
+          position: 'right',
+          widgetStyle: {
+            brandColor: '#c07bff',
+            accentColor: '#a85af6',
+            textColor: '#ffffff',
+            backgroundColor: '#1a0b1f'
+          }
         })
       }
     })(document,"script");
